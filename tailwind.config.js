@@ -1,0 +1,118 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        forest: {
+          50: '#f0f7f3',
+          100: '#dceee4',
+          200: '#bbddca',
+          300: '#8bc4a6',
+          400: '#5aa37d',
+          500: '#3a8562',
+          600: '#2a6a4e',
+          700: '#1f543d',
+          800: '#1a4d3a',
+          900: '#143d2e',
+          950: '#0a2419',
+        },
+        botanical: {
+          50: '#f3f9f0',
+          100: '#e3f1da',
+          200: '#c7e3b6',
+          300: '#a0cd87',
+          400: '#7bb25e',
+          500: '#5d9840',
+          600: '#497c32',
+          700: '#3a6328',
+          800: '#305022',
+          900: '#28421d',
+        },
+        cream: {
+          50: '#fdfcf9',
+          100: '#f9f6ef',
+          200: '#f2ecdf',
+          300: '#e8dfca',
+          400: '#d8c9a8',
+          500: '#c4ae82',
+        },
+        earth: {
+          50: '#faf7f2',
+          100: '#f0e8db',
+          200: '#e0d0b8',
+          300: '#cdb089',
+          400: '#b89360',
+          500: '#a67d47',
+          600: '#8c693b',
+          700: '#705231',
+          800: '#5c4429',
+          900: '#4b3923',
+        },
+        charcoal: {
+          50: '#f6f6f5',
+          100: '#e7e6e4',
+          200: '#cfccc8',
+          300: '#a8a39c',
+          400: '#7c7770',
+          500: '#5c5851',
+          600: '#474440',
+          700: '#3a3835',
+          800: '#2a2926',
+          900: '#1c1b19',
+        },
+      },
+      backgroundImage: {
+        'grain': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E\")",
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.6s ease-out forwards',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'scale-in': 'scaleIn 0.4s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'blob': 'blob 12s ease-in-out infinite',
+        'blob-slow': 'blob 18s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
+        },
+        blob: {
+          '0%, 100%': { borderRadius: '42% 58% 63% 37% / 42% 38% 62% 58%' },
+          '33%': { borderRadius: '58% 42% 38% 62% / 63% 52% 48% 37%' },
+          '66%': { borderRadius: '38% 62% 52% 48% / 38% 58% 42% 62%' },
+        },
+      },
+      boxShadow: {
+        'soft': '0 2px 20px rgba(20, 61, 46, 0.06)',
+        'card': '0 4px 30px rgba(20, 61, 46, 0.08)',
+        'card-hover': '0 12px 40px rgba(20, 61, 46, 0.14)',
+        'glass': '0 8px 32px rgba(20, 61, 46, 0.12)',
+      },
+    },
+  },
+  plugins: [],
+};
